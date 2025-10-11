@@ -122,9 +122,11 @@ nav {
   cursor: pointer;
   transition: 0.3s;
 }
-
-.filter-btn:hover,
 .filter-btn.active {
+  background-color: #005f87;
+  color: white;
+}
+.filter-btn:hover{
   background: #005f87;
 }
 

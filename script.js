@@ -21,18 +21,33 @@ window.addEventListener("scroll", () => {
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projects = document.querySelectorAll(".project");
 
+// Show only Frontend projects by default
+window.addEventListener("DOMContentLoaded", () => {
+  projects.forEach(project => {
+    if (project.dataset.type === "frontend") {
+      project.style.display = "block";
+    } else {
+      project.style.display = "none";
+    }
+  });
+});
+
+// Filter function when a button is clicked
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
-    // Remove active state from other buttons
+    const filter = button.dataset.filter;
+
+    // Update active button styles
     filterButtons.forEach(btn => btn.classList.remove("active"));
     button.classList.add("active");
 
-    const filter = button.getAttribute("data-filter");
-
+    // Show/hide projects based on filter
     projects.forEach(project => {
-      const type = project.getAttribute("data-type");
-      project.style.display =
-        filter === "all" || filter === type ? "block" : "none";
+      if (filter === "all" || project.dataset.type === filter) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
     });
   });
 });
