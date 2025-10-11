@@ -1,62 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chinaza's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
 
+<body>
   <header>
-    <h1>Aninweze Chinaza Maryjane</h1>
-    <p>Computer Science Student | Aspiring Cloud Engineer</p>
+    <nav>
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>From marketing to computer science, my journey has been one of growth and determination. I began learning the basics of tech at Digital Dreams in Enugu, and even faced my fears by retaking the WAEC exam with science subjects — a challenge that taught me persistence. Now, as a Computer Science student at Miva Open University, I’m eager to keep learning and gain hands-on experience to build a successful career in technology.</p>
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <img src="profile.jpg.jpeg" alt="Chinaza Aninweze" class="profile-photo">
+    <h2>Welcome!</h2>
+    <p>I’m a Computer Science student passionate about technology and creating solutions to real-world problems through code and creativity.</p>
   </section>
-  <section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML & CSS</li>
-    <li>Basic JavaScript</li>
-    <li>Cloud Computing (beginner)</li>
-    <li>Teamwork & Communication</li>
-    <li>Problem Solving</li>
-  </ul>
-</section>
-<section id="projects">
-  <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Frontend Training Project</h3>
-    <p>Started building a responsive web page using HTML, CSS, and JavaScript during my training. 
-    Learned how to structure layouts, style elements, and improve user experience. 
-    Currently working to complete and host it online.</p>
-  </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m <strong>Aninweze Chinaza Maryjane</strong> — a dedicated Computer Science student at Miva Open University.  
+      My journey began in the marketing department, but curiosity and determination led me into technology.  
+      From learning the basics at Digital Dreams Enugu to retaking my WAEC with science subjects, I’ve learned that persistence brings progress.  
+      Now, I’m exploring cloud computing and web development, eager to build impactful, user-centered solutions.
+    </p>
+  </section>
 
-  <div class="project">
-    <h3>Portfolio Website (This One!)</h3>
-    <p>Designed and developed my personal portfolio website using HTML and CSS.
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
 
+    <div class="project-filters">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="frontend" class="filter-btn">Frontend</button>
+      <button data-filter="backend" class="filter-btn">Backend</button>
+    </div>
 
+    <div class="project-list">
+      <div class="project" data-type="frontend">
+        <h3>Personal Portfolio Website</h3>
+        <p>A one-page portfolio built with HTML, CSS, and JS to showcase my skills.</p>
+        <a href="https://aninweze-chinaza.github.io/portfolio-website/" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project" data-type="frontend">
+        <h3>Frontend Training Project</h3>
+        <p>Ongoing project from my frontend development training.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+
+      <div class="project" data-type="backend">
+        <h3>Sample Backend Project</h3>
+        <p>An example Node.js backend project with API endpoints.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>I’m open to learning opportunities, internships, or collaborations.</p>
+    <p>
+      <a href="mailto:chinazajane245@gmail.com">
+        <i class="fas fa-envelope"></i> chinazajane245@gmail.com
+      </a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/chinaza-aninweze-14a13334b" target="_blank">
+        <i class="fab fa-linkedin"></i> linkedin.com/in/chinaza-aninweze-14a13334b
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: chinazajane245@gmail.com</p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/chinaza-aninweze-14a13334b" target="_blank">Chinaza Aninweze</a></p>
-</section>
-
+    <p>© 2025 Aninweze Chinaza Maryjane. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/chinaza-aninweze-14a13334b" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Aninweze-Chinaza" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:chinazajane245@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
   </footer>
+
+  <button id="backToTop">↑ Top</button>
+  <script src="script.js"></script>
 </body>
 </html>
